@@ -16,7 +16,7 @@ async function generatePhotographyPrompts() {
             model: "gpt-4",
             messages: [
                 { role: "system", content: "You are a helpful assistant that provides photography prompts" },
-                { role: "user", content: "Generate 50 unique photography prompts for college students. Separate them with newlines. Don't include any other newlines other than the separations between prompts" }
+                { role: "user", content: "Generate 50 unique photography prompts for college students. Separate them with newlines. Don't include any other newlines other than the separations between prompts. Make sure there is no innappropriate content in the generated prompts." }
             ]
         }, {
             headers: {
