@@ -35,7 +35,7 @@ async function generatePhotographyPrompts() {
     }
 }
 
-app.get('/photography-prompts', async (req, res) => {
+app.get('/generate-prompts', async (req, res) => {
     try {
         console.log('Received request for photography prompts');
         res.status(200).json({ message: 'Generating photography prompts...' });
@@ -47,7 +47,7 @@ app.get('/photography-prompts', async (req, res) => {
     }
 });
 
-app.get('/prompts', async (req, res) => {
+app.get('/fetch-prompts', async (req, res) => {
     try {
       const prompts = await fs.readFile('prompts.txt', 'utf8');
       res.status(200).json({ prompts: prompts.split('\n') });
